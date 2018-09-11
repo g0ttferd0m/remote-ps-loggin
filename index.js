@@ -15,5 +15,7 @@ server = http.createServer(function (req, res) {
         res.end('POST received');
     }
 });
-server.listen(process.env.PORT || 8080);
-console.log('Listening at http://' + process.env.HOST + ':' + process.env.PORT);
+port = 8080;
+host = '127.0.0.1';
+server.listen(port, host);
+console.log('Listening at http://' + host + ':' + port);
